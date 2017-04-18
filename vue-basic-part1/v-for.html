@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>v-for | @code4mk </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li  v-for="todo in todos">{{todo.text}} :: {{todo.step}}</li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+
+          todos:[
+            {text: 'learn vue ', step:'basic'},
+            {text: 'learn vue 1', step:'middle'},
+            {text: 'learn vue 2', step:'expert'},
+            {text: 'learn vue 3 ', step:'smart'},
+
+          ]
+        }
+      })
+    </script>
+  </body>
+</html>

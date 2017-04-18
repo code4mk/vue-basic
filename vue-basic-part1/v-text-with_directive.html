@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>text Vue js | @code4mk</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+        <style media="screen">
+            [v-cloak]{
+                display: none;
+            }
+        </style>
+      </head>
+    </head>
+    <body>
+        <div id="app">
+            <!--<h1 v-text="message"></h1>-->
+            <!--<h1 v-html="text"></h1>-->
+            <!--<h1 v-show>{{mess}}</h1>-->
+            <!--<h1 v-if ='viewed' >{{mess}}</h1>-->
+            <!--<h1 v-else>{{ano}}</h1>-->
+            <!--<h1 v-once>{{nev}}</h1>-->
+
+            <!--<div v-cloak>
+                {{clk}}
+
+            </div>-->
+            <h1 v-html="test"></h1>
+        </div>
+
+        <!--script vue-->
+        <script type="text/javascript">
+            var app= new Vue({
+                el:'#app',
+                data:{
+                    //message:'Welcome to vue js @code4mk',
+                    //text: " <h1>vue <small> js html test</small></h1>"
+                    //mess:"welcome to vue v-show",
+                    //ano:"v-else part is shown here",
+                    //viewed:true
+                    //nev:"v-once never change"
+                    //clk:"v clock"
+                    test:'<a href="#">test</a>'
+                }
+            })
+        </script>
+    </body>
+</html>

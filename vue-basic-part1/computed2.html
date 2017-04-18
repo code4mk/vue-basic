@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Computed | @code4mk</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+
+    </head>
+    <body>
+        <div class="" id="app">
+            <h1>You are : {{level}} </h1>
+            <hr>
+            <h1>{{countm}}</h1>
+            <!-- you can use v-on:click or @click-->
+            <button type="button" name="button" @click="countUp">count up</button>
+            <button type="button" name="button" @click="countDown">Count Down</button>
+        </div>
+        <script type="text/javascript">
+            var app = new Vue({
+                el:'#app',
+                data:{
+                    countm:0,
+
+                },
+                methods:{
+                    countUp:function(){
+                        this.countm +=2
+                    },
+                    countDown:function(){
+                        this.countm -=2
+                    }
+                },
+                computed:{
+                    level:function(){
+                        if(this.countm == 0){
+                            return 'start'
+                        }else if(this.countm >=1){
+                            return 'test'
+                        }else{
+                            return 'fails'
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
